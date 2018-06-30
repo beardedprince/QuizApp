@@ -32,137 +32,129 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the View your Scores button is clicked.
      */
-    public void quizCheck (View v){
-        ArrayList <String> wrongAnswer = new ArrayList<String>();
+    public void quizCheck(View v) {
+        ArrayList<String> wrongAnswer = new ArrayList<String>();
 
-        int numberOfCorrectAnswer = 0 ;
+        int numberOfCorrectAnswer = 0;
 
-        if (correctAns1()){
+        if (correctAns1()) {
             numberOfCorrectAnswer++;
-        }
-        else {
+        } else {
             wrongAnswer.add("Question 1");
         }
 
 
-    if (correctAns2()){
-        numberOfCorrectAnswer++;
-    }
-        else {
-        wrongAnswer.add("Question 2");
-    }
-
-        if (correctAns3()){
+        if (correctAns2()) {
             numberOfCorrectAnswer++;
+        } else {
+            wrongAnswer.add("Question 2");
         }
-        else {
+
+        if (correctAns3()) {
+            numberOfCorrectAnswer++;
+        } else {
             wrongAnswer.add("Question 3");
         }
 
-        if (correctAns4()){
+        if (correctAns4()) {
             numberOfCorrectAnswer++;
-        }
-        else {
+        } else {
             wrongAnswer.add("Question 4");
         }
 
-        if (correctAns5()){
+        if (correctAns5()) {
             numberOfCorrectAnswer++;
-        }
-        else {
+        } else {
             wrongAnswer.add("Question 5");
         }
 
-        if (correctAns6()){
+        if (correctAns6()) {
             numberOfCorrectAnswer++;
-        }
-        else {
+        } else {
             wrongAnswer.add("Question 6");
         }
 
-        if (correctAns7()){
+        if (correctAns7()) {
             numberOfCorrectAnswer++;
-        }
-        else {
+        } else {
             wrongAnswer.add("Question 7");
         }
 
-        if (correctAns8()){
+        if (correctAns8()) {
             numberOfCorrectAnswer++;
-        }
-        else {
+        } else {
             wrongAnswer.add("Question 8");
         }
 
         Context context = getApplicationContext();
-        CharSequence text = "You got " + numberOfCorrectAnswer  + " answers right.";
+        CharSequence text = "You got " + numberOfCorrectAnswer + " answers right.";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
-}
+    }
 
-    private boolean correctAns1(){
+    private boolean correctAns1() {
         RadioGroup grp = (RadioGroup) findViewById(R.id.radioGroup1);
-        if (grp.getCheckedRadioButtonId()==Q1){
+        if (grp.getCheckedRadioButtonId() == Q1) {
             return true;
         }
         return false;
     }
 
-    private boolean correctAns2(){
+    private boolean correctAns2() {
         RadioGroup grp = (RadioGroup) findViewById(R.id.radioGroup2);
-        if (grp.getCheckedRadioButtonId()==Q2){
+        if (grp.getCheckedRadioButtonId() == Q2) {
             return true;
         }
         return false;
     }
 
-    private boolean correctAns3(){
+    private boolean correctAns3() {
         RadioGroup grp = (RadioGroup) findViewById(R.id.radioGroup3);
-        if (grp.getCheckedRadioButtonId()==Q3){
+        if (grp.getCheckedRadioButtonId() == Q3) {
             return true;
         }
         return false;
     }
 
-    private boolean correctAns4(){
+    private boolean correctAns4() {
         RadioGroup grp = (RadioGroup) findViewById(R.id.radioGroup4);
-        if (grp.getCheckedRadioButtonId()==Q4){
+        if (grp.getCheckedRadioButtonId() == Q4) {
             return true;
         }
         return false;
     }
 
-    private boolean correctAns5(){
+    private boolean correctAns5() {
         RadioGroup grp = (RadioGroup) findViewById(R.id.radioGroup5);
-        if (grp.getCheckedRadioButtonId()==Q5){
+        if (grp.getCheckedRadioButtonId() == Q5) {
             return true;
         }
         return false;
     }
 
-    private boolean correctAns6(){
+    private boolean correctAns6() {
         RadioGroup grp = (RadioGroup) findViewById(R.id.radioGroup6);
-        if (grp.getCheckedRadioButtonId()==Q6){
+        if (grp.getCheckedRadioButtonId() == Q6) {
             return true;
         }
         return false;
     }
 
-    private boolean correctAns7(){
+    private boolean correctAns7() {
         CheckBox grp1 = (CheckBox) findViewById(R.id.check1);
         CheckBox grp2 = (CheckBox) findViewById(R.id.check2);
         CheckBox grp3 = (CheckBox) findViewById(R.id.check3);
         CheckBox grp4 = (CheckBox) findViewById(R.id.check4);
 
-        if (grp1.isChecked() && grp2.isChecked() && grp3.isChecked() && !grp4.isChecked()){
+        if (grp1.isChecked() && grp2.isChecked() && grp3.isChecked() && !grp4.isChecked()) {
             return true;
         }
         return false;
     }
 
-    private boolean correctAns8 (){
+    private boolean correctAns8() {
         EditText txt = (EditText) findViewById(R.id.input);
         return txt.getText().toString().equalsIgnoreCase(Q8);
     }
