@@ -6,7 +6,8 @@
     <string name="holder4">Q4) What is the meaning of XML </string>
     <string name="holder5">Q5) The following are HTML tags except?   </string>
     <string name="holder6">Q6) The following are ways to insert CSS except?  </string>
-    <string name="holder7">Q6) What is the name of the animal shown below?  </string>
+    <string name="holder7">Q7) Which of the following can be used to build websites?  </string>
+    <string name="holder8">Q8) What is the name of the language below called?  </string>
     <string name="check"> View your Score </string>
     <string name="article"> HTML article tag </string>
     <string name="q1rb1"> CardView </string>
@@ -33,5 +34,9 @@
     <string name="q6rb2">Updown Style</string>
     <string name="q6rb3">External Style Sheet</string>
     <string name="q6rb4">Internal Style Sheet</string>
-
+    <string name="chk1">HTML</string>
+    <string name="chk2">CSS</string>
+    <string name="chk3">JavaScript</string>
+    <string name="chk4">QBasic</string>
+    <string name="txthint">Enter your answer here</string>
 </resources>

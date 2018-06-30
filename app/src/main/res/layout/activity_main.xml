@@ -388,36 +388,25 @@
     </LinearLayout>
 
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="quizCheck"
-            android:layout_below="@id/quesT6"
-            android:gravity="center"
-            android:text="@string/check"
-            android:id="@+id/button"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp" />
-
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:id="@+id/quesT"
-        android:layout_below="@id/button"
-        android:paddingTop="10dp">
+        android:layout_below="@id/quesT6"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp">
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_below="@id/quesT6"
+            >
 
-            app:cardCornerRadius="15dp">
+
 
             <TextView
 
@@ -427,19 +416,113 @@
                 android:textColor="#000000"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:paddingBottom="20dp"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/chk1"
+                android:id="@+id/check1"/>
 
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk2"
+                android:id="@+id/check2"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk3"
+                android:id="@+id/check3"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk4"
+                android:id="@+id/check4"
                 />
 
 
 
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
 
-    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textV"
+        android:layout_below="@id/quesT"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:layout_below="@id/quesT"
+            android:paddingTop="10dp">
+
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/holder8"
+                android:textColor="#000000"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txthint"
+                android:id="@+id/input"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/kotlin"
+                android:scaleType="fitStart"/>
+
+
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="quizCheck"
+            android:layout_below="@id/textV"
+            android:gravity="center"
+            android:text="@string/check"
+            android:id="@+id/button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="20dp"
+            />
+
+
 
 
 </RelativeLayout>

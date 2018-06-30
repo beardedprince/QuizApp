@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     int Q4 = R.id.Q4Opt1;
     int Q5 = R.id.Q5Opt2;
     int Q6 = R.id.Q6Opt2;
+    int Q7 = R.id.check1;
+    String Q8 = "kotlin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * This method is called when the View your Scores button is clicked.
+     */
     public void quizCheck (View v){
         ArrayList <String> wrongAnswer = new ArrayList<String>();
 
@@ -71,6 +78,20 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             wrongAnswer.add("Question 6");
+        }
+
+        if (correctAns7()){
+            numberOfCorrectAnswer++;
+        }
+        else {
+            wrongAnswer.add("Question 7");
+        }
+
+        if (correctAns8()){
+            numberOfCorrectAnswer++;
+        }
+        else {
+            wrongAnswer.add("Question 8");
         }
 
         Context context = getApplicationContext();
@@ -127,5 +148,22 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+
+    private boolean correctAns7(){
+        CheckBox grp1 = (CheckBox) findViewById(R.id.check1);
+        CheckBox grp2 = (CheckBox) findViewById(R.id.check2);
+        CheckBox grp3 = (CheckBox) findViewById(R.id.check3);
+        CheckBox grp4 = (CheckBox) findViewById(R.id.check4);
+
+        if (grp1.isChecked() && grp2.isChecked() && grp3.isChecked() && !grp4.isChecked()){
+            return true;
+        }
+        return false;
+    }
+
+    private boolean correctAns8 (){
+        EditText txt = (EditText) findViewById(R.id.input);
+        return txt.getText().toString().equalsIgnoreCase(Q8);
     }
 }
